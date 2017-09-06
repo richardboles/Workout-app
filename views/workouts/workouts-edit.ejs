@@ -1,0 +1,26 @@
+<% include ../partials/boilerplate.ejs %>
+
+<a href="http://localhost:3000/">
+<h1>Health and Fitness Plan</h1>
+</a>
+
+<h2>Daily Schedule</h2>
+
+<% for (let workouts of data) { %>
+    <div class='workouts'>
+      <h3>Day 1</h3>
+      <p contenteditable="true"><%= workouts.sunday %></p><h5><p>edit</h5>
+      <p contenteditable="true"><%= workouts.monday %></p><h5><p>edit</h5>
+      <h3>Day 2</h3>
+      <p contenteditable="true"><%= workouts.tuesday %></p><h5><p>edit</h5>
+      <p contenteditable="true"><%= workouts.wednesday %></p><h5><p>edit</h5>
+      <h3>Day 3</h3>
+      <p contenteditable="true"><%= workouts.thursday %></p><h5><p>edit</h5>
+      <p contenteditable="true"><%= workouts.friday %></p><h5><p>edit</h5>
+      <h3>Day 4</h3>
+      <p contenteditable="true"><%= workouts.saturday %></p><h5><p>edit</h5>
+      <a href='/workouts/<%= workouts.id%>'></a>
+    </div>
+  <% } %>
+
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,22 @@
+<% include ../partials/boilerplate.ejs %>
+
+
+<h1>Health and Fitness Plan</h1>
+<h2>Daily Schedule</h2>
+
+
+<% for (let workouts of data) { %>
+    <div class='workouts'>
+      <p><%= workouts.sunday %></p>
+      <p><%= workouts.monday %></p>
+      <p><%= workouts.tuesday %></p>
+      <p><%= workouts.wednesday %></p>
+      <p><%= workouts.thursday %></p>
+      <p><%= workouts.friday %></p>
+      <p><%= workouts.saturday %></p>
+
+      <a href='/workouts/<%= workouts.id%>'>back to list</a>
+    </div>
+  <% } %>
+
+<% include ../partials/footer.ejs %>
